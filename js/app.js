@@ -52,7 +52,7 @@ $(document).ready(function() {
   			return $('title').text();
   		},
   		data: function(){ 
-  			return $('#text').val() + '.txt';
+  			return $('#text').val();
   		},
   		onComplete: function(){},
   		onCancel: function(){},
