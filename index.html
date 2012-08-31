@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/app.css">
+
+  <script src="js/jquery-1.7.1.min.js"></script>
+  <script src="js/downloadify/js/swfobject.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/downloadify/js/downloadify.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/app.js"></script>
+    
+	<meta charset="UTF-8">
+	<title>Opsa.txt</title>
+</head>
+<body>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <form class="navbar-form pull-left">
+          <label class="btn" disabled for="open-file">Open</label>
+          <input type="file" name="open-file" id="open-file" />
+          <span id="save-file">
+            <a href="#" class="btn disabled">Save As...</a>
+          </span>
+        </form>
+        <div class="navbar-text pull-right">
+          <span class="label fileapi">File API</span>
+          <span class="label flash">Flash</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <textarea id="text" style="height: 100%;">1. Click "Open" to open a text file from your computer.
+2. Write stuff.
+3. Click "Save" to save it back to your computer.
+4. Fork this and start making web apps that can do round trip editing with local files!
+  </textarea>
+</body>
+</html>
