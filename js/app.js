@@ -22,6 +22,10 @@ function fileSelect(event) {
   importFile(file);
 };
 
+/* TODO: importFile function for reading files with flash */
+// function importFile(argument) {
+// }
+
 
 $(document).ready(function() {
 
@@ -39,9 +43,10 @@ $(document).ready(function() {
   }
 
   // Save file: Check for flash
-  if (typeof swfobject !== 'undefined' && swfobject.getFlashPlayerVersion().major >= 10) {
+  if (typeof swfobject !== 'undefined' && swfobject.getFlashPlayerVersion().major >= 10 && window.location.href.indexOf('file://') != 0) {
     $('html').addClass('flash');
     $('.label.flash').addClass('label-success');
+
     Downloadify.create('save-file',{
   		filename: function(){
   			return $('title').text();
@@ -59,11 +64,14 @@ $(document).ready(function() {
   		transparent: true,
   		append: false
   	});
-    
+  }
+  else if (window.location.href.indexOf('file://') == 0) {
+    $('html').addClass('flash');
+    $('.label.flash').text('Flash "file://" security error');
   }
   else {
     $('html').addClass('no-flash');
-    $('.label.fileapi').addClass('label-important');
+    $('.label.flash').addClass('label-important');
   }
 
 });
