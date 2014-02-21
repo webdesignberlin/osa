@@ -8,10 +8,6 @@ OSA uses the [File API](https://developer.mozilla.org/en-US/docs/Using_files_fro
 
 Remember to use a web server to serve the app, as the Flash file won't save files due to security restrictions if the app is opened as a local file.
 
-## Demo
-
-[Demo](http://elementalapp.com/osa)
-
 ## Further reading
 
 [File Writer API](http://www.w3.org/TR/file-writer-api/)
